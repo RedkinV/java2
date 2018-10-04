@@ -16,6 +16,10 @@ public class Human implements Competitor {
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+    @Override
     public boolean isOnDistance() {
         return onDistance;
     }

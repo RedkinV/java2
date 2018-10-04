@@ -16,6 +16,11 @@ public class Animal implements Competitor{
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
     public boolean isOnDistance() {
         return onDistance;
     }

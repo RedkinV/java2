@@ -3,8 +3,10 @@ package ru.geekbrains.java2.lesson1;
 public class Team {
     private Competitor[] competitors;
     private Obstacle[] obstacles;
+    private String teamName;
 
-    public Team(Competitor[] competitors, Obstacle[] obstacles) {
+    public Team(String teamName,Competitor[] competitors, Obstacle[] obstacles) {
+        this.teamName=teamName;
         this.competitors = competitors;
         this.obstacles = obstacles;
     }
@@ -19,8 +21,18 @@ public class Team {
     }
 
     public void results(){
+
+        System.out.println();
+        System.out.println("Taem "+teamName+" results:");
         for (Competitor c: competitors) {
             c.info();
+        }
+    }
+    public void winners(){
+        System.out.println();
+        System.out.println("Taem "+teamName+" winners:");
+        for (Competitor c: competitors) {
+            if (c.isOnDistance()) System.out.println(c.getName());
         }
     }
 }
